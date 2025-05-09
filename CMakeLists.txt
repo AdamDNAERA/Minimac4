@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.5)
 project(minimac4 VERSION 4.1.6)
 
 if(NOT CMAKE_BUILD_TYPE)
