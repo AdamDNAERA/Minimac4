@@ -1,0 +1,23 @@
+services:
+  cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: minimac4_cli
+    volumes:
+      - /Users/adamfrtus/bioinfo/phased_output:/phased_output
+      - /Users/adamfrtus/bioinfo/Minimac4:/Minimac4
+      - /Volumes/T7:/Volumes/T7
+    working_dir: /phased_output
+    entrypoint: [ "minimac4" ]  # Keep this for interactive usage with minimac4
+
+  run_autosomes:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: minimac4_run_autosomes
+    volumes:
+      - /Users/adamfrtus/bioinfo/phased_output:/phased_output
+      - /Users/adamfrtus/bioinfo/Minimac4:/Minimac4
+      - /Volumes/T7:/Volumes/T7
+    entrypoint: [ "bash", "/Minimac4/run_minimac4_autosomes.sh" ]  # Correct entrypoint to run the script

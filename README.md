@@ -1,3 +1,5 @@
+# basic run> docker compose run --rm minimac4 
+# basic run> docker compose run --rm minimac4 -v
 # Minimac4
 
 Minimac4 is a lower memory and more computationally efficient
