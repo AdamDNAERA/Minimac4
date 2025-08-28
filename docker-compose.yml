@@ -21,3 +21,15 @@ services:
       - /Users/adamfrtus/bioinfo/Minimac4:/Minimac4
       - /Volumes/T7:/Volumes/T7
     entrypoint: [ "bash", "/Minimac4/run_minimac4_autosomes.sh" ]  # Correct entrypoint to run the script
+
+  run_msav_gen:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: minimac4_run_msav_gen
+    volumes:
+      - /Users/adamfrtus/bioinfo/phased_output:/phased_output
+      - /Users/adamfrtus/bioinfo/Minimac4:/Minimac4
+      - /Volumes/T7:/Volumes/T7
+    working_dir: /phased_output
+    entrypoint: [ "/bin/bash", "/Minimac4/run_build_msav.sh" ]
