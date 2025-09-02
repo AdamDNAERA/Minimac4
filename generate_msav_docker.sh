@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#OLD/deprecated
 # Path to your m3vcf files
 REF_DIR="/Volumes/T7/1000G_GRCh37_EUR_noFIN/filtered_files_EUR_noFIN_MVCF"
 

@@ -8,7 +8,9 @@ THREADS=4
 
 mkdir -p "$OUT_DIR"
 
-for CHR in {1..22}; do
+# for CHR in {1..22}; do
+# iba jeden chromozom lebo sa test
+for CHR in {1}; do
     echo "🧬 Imputing chromosome $CHR..."
 
     minimac4 \
