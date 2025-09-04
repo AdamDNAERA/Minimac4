@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#deprecated/OLD - currently we are using the MSAV files directly from reference server
 set -euo pipefail
 
 # Path to your m3vcf files (mounted into the container)
